@@ -11,6 +11,7 @@ header {
     position: sticky;
     background-color: #fff;
     top: 0;
+    z-index: 1;
 }
 .header__logo {
     height: 30px;
@@ -43,22 +44,17 @@ header {
   .about__image {
     width: 500px;
   }
-  .about__sun-image {
+
+  @keyframes rotation {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+  }
+  .about__sun—image {
     width: 100px;
     height: 100px;
-    animation-name: rotation;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    transform: rotate(360deg);
+    animation: rotation 10s infinite linear;
     position: absolute;
-    
   }
-  @keyframes rotation {
-    from {transform: rotate(0);}
-    to {transform: rotate(360deg);}
-  }
-
   .about {
     display: flex;
     align-items: center;
